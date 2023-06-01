@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>day02</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+<!-- 서블릿 지정-->
+	<servlet>
+		<servlet-name>MyServlet</servlet-name>
+		<servlet-class>com.example.servlet.app.MyServlet</servlet-class>
+	</servlet>
+<!-- 서블릿의 URL 표시-->
+	<servlet-mapping>
+		<servlet-name>MyServlet</servlet-name>
+		<url-pattern>/MyServlet</url-pattern>
+	</servlet-mapping>
+
+<!-- jsp파일 지정 -->	
+	<servlet>
+		<servlet-name>index</servlet-name>
+		<jsp-file>/index.jsp</jsp-file>
+	</servlet>
+<!-- jsp파일의 URL 표시 지정 -->
+	<servlet-mapping>
+		<servlet-name>index</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Info</servlet-name>
+		<servlet-class>com.example.servlet.app.Info</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Info</servlet-name>
+		<url-pattern>/info</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>info-jsp</servlet-name>
+		<jsp-file>/info.jsp</jsp-file>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>info-jsp</servlet-name>
+		<url-pattern>/info-jsp</url-pattern>
+	</servlet-mapping>
+	
+	
+</web-app>
+
+
+
+
